@@ -128,3 +128,23 @@ root@ce381284c22e:/app# ls
     myfile.txt
 root@ce381284c22e:/app# cat myfile.txt
     Hi, I'm Josda Quinvar root@ce381284c22e:/app#  
+
+### docker build -f docker/python/dockerfile -t python-app:latest docker/python 
+[+] Building 6.2s (8/8) FINISHED                                                                                             docker:default
+ => [internal] load build definition from dockerfile                                                                                   0.1s
+ => => transferring dockerfile: 110B                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/python:3.9                                                                          0.0s
+ => [internal] load .dockerignore                                                                                                      0.1s
+ => => transferring context: 2B                                                                                                        0.0s
+ => [1/3] FROM docker.io/library/python:3.9                                                                                            1.5s
+ => [internal] load build context                                                                                                      0.4s
+ => => transferring context: 76B                                                                                                       0.0s
+ => [2/3] WORKDIR /app                                                                                                                 0.4s
+ => [3/3] COPY script.py .                                                                                                             0.5s
+ => exporting to image                                                                                                                 2.9s
+ => => exporting layers                                                                                                                2.7s
+ => => writing image sha256:e75e4c27980d02079482c3a8f8ee75f6057d6ff8eae1110461738d7a3268af0b                                           0.0s
+ => => naming to docker.io/library/python-app:latest                                                                                   0.0s
+
+ ### docker run python-app:latest
+Salut!, J'appelle Josda Quinvar
