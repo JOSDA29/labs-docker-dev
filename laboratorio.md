@@ -41,8 +41,6 @@ b3e2ff90a891
 ## Output de los comandos - bulding images
 
 ### docker build -t ubuntu-updated:latest .
-
-### Output de Construcción de Docker
 [+] Building 8.6s (6/6) FINISHED                                                                                docker:default
  => [internal] load build definition from dockerfile                                                                      0.1s
  => => transferring dockerfile: 96B                                                                                       0.0s
@@ -55,3 +53,20 @@ b3e2ff90a891
  => => exporting layers                                                                                                   0.5s
  => => writing image sha256:28a00ff051707baf1ac994f840c599ec7ff9fa059e8f3b5215ad4cf79c16f779                              0.0s
  => => naming to docker.io/library/ubuntu-updated:latest                                                                  0.0s
+
+### docker build -f docker/nginx/dockerfile -t my-nginx:latest .
+[+] Building 14.8s (6/6) FINISHED                                                                               docker:default
+ => [internal] load build definition from dockerfile                                                                      0.1s
+ => => transferring dockerfile: 137B                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                          0.0s
+ => [internal] load .dockerignore                                                                                         0.1s
+ => => transferring context: 2B                                                                                           0.0s
+ => CACHED [1/2] FROM docker.io/library/ubuntu:latest                                                                     0.0s
+ => [2/2] RUN apt-get update && apt-get install -y nginx                                                                 13.2s
+ => exporting to image                                                                                                    1.1s
+ => => exporting layers                                                                                                   0.9s
+ => => writing image sha256:cbd740e804635c1c741c5b854ff43f39cb54c1db0eea9842b4581aa5d6804ce6                              0.0s
+ => => naming to docker.io/library/my-nginx:latest                                                                        0.0s
+
+ ### docker run -d -p 80:80 my-nginx:latest
+ 9bd89bd029067b9066b7242ec06682e57715dc286beaaedeaade30c048d37170
