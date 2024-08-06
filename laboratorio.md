@@ -30,3 +30,8 @@ root@b3e2ff90a891:/#
 
 ### docker run -d -p 8000:80 httpd
 024d239aab49adee9748de3f51237540342a144ab896c9473216ebe96788e592
+
+## Output de los comandos - Removing containers
+
+### docker rm b3e2ff90a891 - keen_lewin
+b3e2ff90a891
