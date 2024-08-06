@@ -38,7 +38,7 @@ b3e2ff90a891
 
 # Laboratorio Docker #2
 
-## Output de los comandos - bulding images
+## Output de los comandos - building images
 
 ### docker build -t ubuntu-updated:latest .
 [+] Building 8.6s (6/6) FINISHED                                                                                docker:default
@@ -70,3 +70,17 @@ b3e2ff90a891
 
  ### docker run -d -p 80:80 my-nginx:latest
  9bd89bd029067b9066b7242ec06682e57715dc286beaaedeaade30c048d37170
+
+ ### docker build -f docker/nginx/dockerfile -t my-nginx:latest .
+[+] Building 0.5s (6/6) FINISHED                                                                                docker:default
+ => [internal] load build definition from dockerfile                                                                      0.0s
+ => => transferring dockerfile: 147B                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                          0.0s
+ => [internal] load .dockerignore                                                                                         0.0s
+ => => transferring context: 2B                                                                                           0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                                                                            0.0s
+ => CACHED [2/2] RUN apt-get update && apt-get install -y nginx                                                           0.0s
+ => exporting to image                                                                                                    0.1s
+ => => exporting layers                                                                                                   0.0s
+ => => writing image sha256:67bc6c498dffebf2e0ae36104f30e284727d53cb53181fffea22c3690b259654                              0.0s
+ => => naming to docker.io/library/my-nginx:latest                                                                        0.0s
