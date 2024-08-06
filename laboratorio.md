@@ -68,10 +68,10 @@ b3e2ff90a891
  => => writing image sha256:cbd740e804635c1c741c5b854ff43f39cb54c1db0eea9842b4581aa5d6804ce6                              0.0s
  => => naming to docker.io/library/my-nginx:latest                                                                        0.0s
 
- ### docker run -d -p 80:80 my-nginx:latest
+### docker run -d -p 80:80 my-nginx:latest
  9bd89bd029067b9066b7242ec06682e57715dc286beaaedeaade30c048d37170
 
- ### docker build -f docker/nginx/dockerfile -t my-nginx:latest .
+### docker build -f docker/nginx/dockerfile -t my-nginx:latest .
 [+] Building 0.5s (6/6) FINISHED                                                                                docker:default
  => [internal] load build definition from dockerfile                                                                      0.0s
  => => transferring dockerfile: 147B                                                                                      0.0s
@@ -85,9 +85,9 @@ b3e2ff90a891
  => => writing image sha256:67bc6c498dffebf2e0ae36104f30e284727d53cb53181fffea22c3690b259654                              0.0s
  => => naming to docker.io/library/my-nginx:latest                                                                        0.0s
 
- ## Output de los comandos - Common instructions in dockerfile
+## Output de los comandos - Common instructions in dockerfile
 
- ### docker build -f docker/nginx/dockerfile -t my-nginx:latest docker/nginx
+### docker build -f docker/nginx/dockerfile -t my-nginx:latest docker/nginx
  [+] Building 1.4s (7/7) FINISHED                                                                                docker:default
  => [internal] load build definition from dockerfile                                                                      0.1s
  => => transferring dockerfile: 216B                                                                                      0.0s
@@ -146,5 +146,5 @@ root@ce381284c22e:/app# cat myfile.txt
  => => writing image sha256:e75e4c27980d02079482c3a8f8ee75f6057d6ff8eae1110461738d7a3268af0b                                           0.0s
  => => naming to docker.io/library/python-app:latest                                                                                   0.0s
 
- ### docker run python-app:latest
+### docker run python-app:latest
 Salut!, J'appelle Josda Quinvar
