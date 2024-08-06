@@ -1,6 +1,6 @@
 # Laboratorio Docker
 
-## Output de los comandos
+## Output de los comandos - Pulling an image
 
 ### docker pull ubuntu:latest
 latest: Pulling from library/ubuntu
@@ -22,3 +22,11 @@ ddfb50ba1977: Pull complete
 Digest: sha256:65438c2e26dbf9f5db4b5553e332747fa20722c1b7c7ccc6f8480396ff4186db
 Status: Downloaded newer image for python:3.9
 docker.io/library/python:3.9
+
+## Output de los comandos - Running our container
+
+### docker run -it ubuntu bash
+root@b3e2ff90a891:/# 
+
+### docker run -d -p 8000:80 httpd
+024d239aab49adee9748de3f51237540342a144ab896c9473216ebe96788e592
