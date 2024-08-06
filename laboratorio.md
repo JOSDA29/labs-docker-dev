@@ -35,3 +35,23 @@ root@b3e2ff90a891:/#
 
 ### docker rm b3e2ff90a891 - keen_lewin
 b3e2ff90a891
+
+# Laboratorio Docker #2
+
+## Output de los comandos - bulding images
+
+### docker build -t ubuntu-updated:latest .
+
+### Output de Construcción de Docker
+[+] Building 8.6s (6/6) FINISHED                                                                                docker:default
+ => [internal] load build definition from dockerfile                                                                      0.1s
+ => => transferring dockerfile: 96B                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                          0.0s
+ => [internal] load .dockerignore                                                                                         0.1s
+ => => transferring context: 2B                                                                                           0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                                                                            0.1s
+ => [2/2] RUN apt-get update && apt-get upgrade -y                                                                        7.4s
+ => exporting to image                                                                                                    0.6s
+ => => exporting layers                                                                                                   0.5s
+ => => writing image sha256:28a00ff051707baf1ac994f840c599ec7ff9fa059e8f3b5215ad4cf79c16f779                              0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest                                                                  0.0s
