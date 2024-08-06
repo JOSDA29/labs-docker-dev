@@ -104,3 +104,27 @@ b3e2ff90a891
  => => naming to docker.io/library/my-nginx:latest                                                                        0.0s
 
 ### docker run -d -p 8080:80 my-nginx:latest
+4a01ba8ee5830963daa74b383945ed61dff7d42c4611f669abdd7348cfb1cc2b
+
+### docker build -f docker/ubuntu/docker file -t ubuntu-app:latest docker/ubuntu    
+[+] Building 3.5s (8/8) FINISHED                                                                                docker:default
+ => [internal] load build definition from dockerfile                                                                      0.1s
+ => => transferring dockerfile: 151B                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                          0.0s
+ => [internal] load .dockerignore                                                                                         0.1s
+ => => transferring context: 2B                                                                                           0.0s
+ => CACHED [1/3] FROM docker.io/library/ubuntu:latest                                                                     0.0s
+ => [internal] load build context                                                                                         0.2s
+ => => transferring context: 58B                                                                                          0.0s
+ => [2/3] WORKDIR /app                                                                                                    0.4s
+ => [3/3] COPY myfile.txt .                                                                                               0.4s
+ => exporting to image                                                                                                    1.3s
+ => => exporting layers                                                                                                   1.1s
+ => => writing image sha256:cac8d2cf4002b67a050399b32740db62e201b39514120e9147e795c8a59450e8                              0.0s
+ => => naming to docker.io/library/ubuntu-app:latest                                                                      0.1s
+
+### docker run -it ubuntu-app:latest bash
+root@ce381284c22e:/app# ls
+    myfile.txt
+root@ce381284c22e:/app# cat myfile.txt
+    Hi, I'm Josda Quinvar root@ce381284c22e:/app#  
